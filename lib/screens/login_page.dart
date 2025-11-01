@@ -61,20 +61,31 @@ class _LoginPageState extends State<LoginPage> {
                         color: const Color.fromRGBO(0, 0, 0, 0.25),
                         blurRadius: 10,
                         offset: const Offset(0, 6),
-                      )
+                      ),
                     ],
                   ),
-                  child: const Icon(Icons.shopping_bag_rounded, color: Colors.white, size: 44),
+                  child: const Icon(
+                    Icons.shopping_bag_rounded,
+                    color: Colors.white,
+                    size: 44,
+                  ),
                 ),
                 const SizedBox(height: 18),
                 const Text(
                   'Selamat Datang',
-                  style: TextStyle(color: Colors.white, fontSize: 26, fontWeight: FontWeight.w700),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 26,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
                 const SizedBox(height: 6),
                 Text(
                   'Masuk untuk melanjutkan',
-                  style: TextStyle(color: const Color.fromRGBO(255, 255, 255, 0.9), fontSize: 14),
+                  style: TextStyle(
+                    color: const Color.fromRGBO(255, 255, 255, 0.9),
+                    fontSize: 14,
+                  ),
                 ),
                 const SizedBox(height: 22),
 
@@ -89,7 +100,9 @@ class _LoginPageState extends State<LoginPage> {
                       decoration: BoxDecoration(
                         color: const Color.fromRGBO(255, 255, 255, 0.08),
                         borderRadius: BorderRadius.circular(16),
-                        border: Border.all(color: const Color.fromRGBO(255, 255, 255, 0.12)),
+                        border: Border.all(
+                          color: const Color.fromRGBO(255, 255, 255, 0.12),
+                        ),
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -104,10 +117,20 @@ class _LoginPageState extends State<LoginPage> {
                             style: const TextStyle(color: Colors.white),
                             decoration: InputDecoration(
                               hintText: 'Email',
-                              hintStyle: TextStyle(color: const Color.fromRGBO(255, 255, 255, 0.7)),
-                              prefixIcon: Icon(Icons.email_outlined, color: Colors.white70),
+                              hintStyle: TextStyle(
+                                color: const Color.fromRGBO(255, 255, 255, 0.7),
+                              ),
+                              prefixIcon: Icon(
+                                Icons.email_outlined,
+                                color: Colors.white70,
+                              ),
                               filled: true,
-                              fillColor: const Color.fromRGBO(255, 255, 255, 0.03),
+                              fillColor: const Color.fromRGBO(
+                                255,
+                                255,
+                                255,
+                                0.03,
+                              ),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
                                 borderSide: BorderSide.none,
@@ -127,14 +150,30 @@ class _LoginPageState extends State<LoginPage> {
                             style: const TextStyle(color: Colors.white),
                             decoration: InputDecoration(
                               hintText: 'Password',
-                              hintStyle: TextStyle(color: const Color.fromRGBO(255, 255, 255, 0.7)),
-                              prefixIcon: Icon(Icons.lock_outline, color: Colors.white70),
+                              hintStyle: TextStyle(
+                                color: const Color.fromRGBO(255, 255, 255, 0.7),
+                              ),
+                              prefixIcon: Icon(
+                                Icons.lock_outline,
+                                color: Colors.white70,
+                              ),
                               suffixIcon: IconButton(
-                                icon: Icon(_obscure ? Icons.visibility_off : Icons.visibility, color: Colors.white70),
-                                onPressed: () => setState(() => _obscure = !_obscure),
+                                icon: Icon(
+                                  _obscure
+                                      ? Icons.visibility_off
+                                      : Icons.visibility,
+                                  color: Colors.white70,
+                                ),
+                                onPressed: () =>
+                                    setState(() => _obscure = !_obscure),
                               ),
                               filled: true,
-                              fillColor: const Color.fromRGBO(255, 255, 255, 0.03),
+                              fillColor: const Color.fromRGBO(
+                                255,
+                                255,
+                                255,
+                                0.03,
+                              ),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
                                 borderSide: BorderSide.none,
@@ -151,10 +190,20 @@ class _LoginPageState extends State<LoginPage> {
                               onPressed: _onLoginTap,
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: const Color(0xFF6A0DAD),
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
                                 elevation: 6,
-                                shadowColor: const Color.fromRGBO(0, 0, 0, 0.35),
-                                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                                shadowColor: const Color.fromRGBO(
+                                  0,
+                                  0,
+                                  0,
+                                  0.35,
+                                ),
+                                textStyle: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                               child: const Text('Masuk'),
                             ),
@@ -165,7 +214,10 @@ class _LoginPageState extends State<LoginPage> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Text('atau masuk dengan', style: TextStyle(color: Colors.white70)),
+                              const Text(
+                                'atau masuk dengan',
+                                style: TextStyle(color: Colors.white70),
+                              ),
                             ],
                           ),
                           const SizedBox(height: 12),
@@ -185,13 +237,29 @@ class _LoginPageState extends State<LoginPage> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text('Belum punya akun? ', style: TextStyle(color: const Color.fromRGBO(255, 255, 255, 0.85))),
+                              Text(
+                                'Belum punya akun? ',
+                                style: TextStyle(
+                                  color: const Color.fromRGBO(
+                                    255,
+                                    255,
+                                    255,
+                                    0.85,
+                                  ),
+                                ),
+                              ),
                               GestureDetector(
                                 onTap: () {},
-                                child: const Text('Daftar', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700)),
-                              )
+                                child: const Text(
+                                  'Daftar',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
                             ],
-                          )
+                          ),
                         ],
                       ),
                     ),
@@ -226,11 +294,15 @@ class _LoginPageState extends State<LoginPage> {
 
     // Simple validation example
     if (email.isEmpty || pass.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Email dan password wajib diisi')));
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Email dan password wajib diisi')),
+      );
       return;
     }
 
     // Placeholder action: show snackbar
-    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Mencoba masuk...')));
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(const SnackBar(content: Text('Mencoba masuk...')));
   }
 }

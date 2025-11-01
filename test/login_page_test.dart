@@ -3,7 +3,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_application_1/screens/login_page.dart';
 
 void main() {
-  testWidgets('LoginPage - fills form and shows snackbar', (WidgetTester tester) async {
+  testWidgets('LoginPage - fills form and shows snackbar', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(const MaterialApp(home: LoginPage()));
 
     final Finder email = find.byKey(const Key('emailField'));
